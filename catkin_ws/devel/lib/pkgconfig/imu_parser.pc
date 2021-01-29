@@ -1,0 +1,8 @@
+prefix=/home/i_ssh_rq/catkin_ws/devel
+
+Name: imu_parser
+Description: Description of imu_parser
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

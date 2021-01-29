@@ -1,0 +1,7 @@
+set(imu_parser_SETUP_PY_SETUP_MODULE "distutils.core")
+set(imu_parser_SETUP_PY_VERSION "0.0.0")
+set(imu_parser_SETUP_PY_SCRIPTS "")
+set(imu_parser_SETUP_PY_PACKAGES "​imu_parser")
+set(imu_parser_SETUP_PY_PACKAGE_DIRS "include/​imu_parser")
+set(imu_parser_SETUP_PY_MODULES "")
+set(imu_parser_SETUP_PY_MODULE_DIRS "")

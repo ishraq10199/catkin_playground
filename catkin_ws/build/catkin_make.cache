@@ -1,0 +1,2 @@
+imu_parser
+-DCATKIN_DEVEL_PREFIX=/home/i_ssh_rq/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/i_ssh_rq/catkin_ws/install -G Unix Makefiles
