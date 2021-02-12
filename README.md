@@ -14,12 +14,27 @@ Will not be of much use to you.
 # ROS installation on Windows via WSL2
 -------------------------------------------------------------------------------------------------------------------------
 
+USB DEVICES DO NOT WORK IN THIS ROS SETUP, SO PLEASE DO NOT FOLLOW THIS IF YOU NEED USB DEVICES TO WORK. 
+AT THE TIME OF WRITING THIS DOC, THE REASON FOR NOT INCLUDING USB DEVICE SUPPORT INSTRUCTIONS IS THAT 
+THIS WSL2 ENVIRONMENT IS FOR CONNECTING TO A REMOTE ROS INSTALL THROUGH THE NETWORK AND RUNNING RVIZ/GAZEBO VIA XSERVER. 
+PLEASE PROCEED AT YOUR OWN RISK!
+
+The following will be categorized into several parts, use this to jump to your desired section:
+
+   1.   [`Setting up WSL2 in Windows`](#installing-wsl2---part-one)
+   2.   [`Setting up Ubuntu 18.04`](#install-ubuntu-1804-from-microsoft-store)
+   3.   [`Filesystem access from inside Windows`](#filesystem-access-from-inside-windows)
+   4.   [`Enabling GUI/Xserver stuff`](#gui-enabling-and-xserver-stuff)
+
+
+#### Please note that step iv is not necessary if you want a minimal (CLI only) ROS environment later on.
 
 WSL1 is NOT recommended for ROS, as WSL2 provides superior integration with the kernel. Please refer to the following commands to install WSL2 and setup Ubuntu 18.04
 
-* Open Powershell as admin first.
 
 ### Installing WSL2 - part one
+
+Open Powershell as admin first, then enter the following commands:
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
@@ -27,6 +42,8 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 You then need to restart your machine to finish the WSL install and the upgrade to WSL2.
 
 ### Installing WSL2 - part two
+
+In powershell, type in:
 ```
 wsl --set-default-version 2
 ```
@@ -75,7 +92,7 @@ Inside your file explorer, go to the address bar, and type in:
 ```
 This will open up a folder that is mapped to the `/` directory of your Ubuntu 18.04 filesystem. Use this responsibly, as the recommended approach to fs manipulation is doing it from inside the Ubuntu terminal, and not from Windows itself.
 
-### GUI enabling/Xserver stuff
+### GUI enabling and Xserver stuff
 
 1. Install this in Windows: https://sourceforge.net/projects/vcxsrv/
 2. Click next until you see the Extra Settings section. Make sure to provide the following selection:
@@ -112,6 +129,19 @@ sudo apt update
 sudo apt install x11-apps
 ```
 Run any X11 app like `xcalc` to test it out. If you see a calculator, you are good to go.
+
+### Install ROS Melodic
+
+1. Open Ubuntu terminal through the Start menu.
+2. Run the following commands (Please note that this script installs the FULL-DESKTOP version of ROS, which is not what you want, if you are going for a minimal, cli-only install. In that case, please refer to the official installation doc, to see what commands to enter. If you are going for a full ROS environment, just proceed)
+```
+wget https://gist.githubusercontent.com/ishraq10199/ef12bf89f7f1a927e26d9e273e1c8d3e/raw/cbb768b6f0809482a956460da9084a6a0ceaa170/rosInstallMelodicMorena.sh
+chmod +x rosInstallMelodicMorena.sh
+./rosInstallMelodicMorena.sh
+```
+3. Enter your password (the one you were asked for at your first launch of Ubuntu) when prompted. This step is probably the longest, and depends mostly on your internet connection. Do check back once in a while to make sure things are going normally. If installation stops midway, just re-run the last command by pressing up arrow and enter. Should work fine.
+
+4. Finally run `source /opt/ros/melodic/setup.bash` to finalize the ROS install
 
 ----------------------------------------------------------------------------------------------------------------
 
