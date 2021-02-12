@@ -2,8 +2,15 @@
 
 ```
 This repository is a transient scratchpad for catkin tools. 
-I will be using this for personal tests and stuff, so don't bother cloning this. 
-Will not be of much use to you.
+I will be using this for personal tests and stuff, so don't bother cloning this.
+
+What you may find useful are:
+
++ Scripts in InitScripts/
++ Stuff written in README.md
++ cat.png
+
+I am fairly certain that the rest of the repo will not be of much use to you ¯\_(ツ)_/¯ 
 ```
 
 ### Table of Contents
