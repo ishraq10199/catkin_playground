@@ -109,8 +109,8 @@ This will open up a folder that is mapped to the `/` directory of your Ubuntu 18
 [ ] Native opengl
 [x] Disable access control
 ```
-[x] represents checked
-[ ] represents unchecked `( ._.)`
+`[x]` represents checked
+`[ ]` represents unchecked `( ._.)`
 
 3. Keep clicking next until it finishes. For the Firewall message, make to check both Private and Public networks.
 4. Launch Ubuntu 18.04 from the start menu.
@@ -123,7 +123,7 @@ export LIBGL_ALWAYS_INDIRECT=0
 ```
 export DISPLAY=___YOUR_IP___:0.0
 ```
-PLEASE SUBSTITUE ___YOUR_IP___ with your actual IP address instead of copy-pasting the command as is. `(._. )`
+PLEASE SUBSTITUE `___YOUR_IP___` with your actual IP address instead of copy-pasting the command as is. `(._. )`
 
 8. Ctrl+S and Ctrl+X  to save and exit
 9. Enter the following command inside the Ubuntu terminal:
