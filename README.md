@@ -142,7 +142,7 @@ Run any X11 app like `xcalc` to test it out. If you see a calculator, you are go
 1. Open Ubuntu terminal through the Start menu.
 2. Run the following commands (Please note that this script installs the FULL-DESKTOP version of ROS, which is not what you want, if you are going for a minimal, cli-only install. In that case, please refer to the official installation doc, to see what commands to enter. If you are going for a full ROS environment, just proceed)
 ```
-wget https://gist.githubusercontent.com/ishraq10199/ef12bf89f7f1a927e26d9e273e1c8d3e/raw/cbb768b6f0809482a956460da9084a6a0ceaa170/rosInstallMelodicMorena.sh
+wget https://gist.githubusercontent.com/ishraq10199/ef12bf89f7f1a927e26d9e273e1c8d3e/raw/1bc8bdafaeb155b04dd7439a21071f7b8bd8dd8a/rosInstallMelodicMorena.sh
 chmod +x rosInstallMelodicMorena.sh
 ./rosInstallMelodicMorena.sh
 ```
